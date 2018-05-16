@@ -70,6 +70,19 @@ dispatch_source_t CreateDispatchTimer(double interval, dispatch_queue_t queue, d
 }
 
 #pragma mark - 定时器操作
+
+- (void)pause {
+    if(_timer) {
+        dispatch_suspend(_timer);
+    }
+}
+
+- (void)resume {
+    if(_timer) {
+        dispatch_resume(_timer);
+    }
+}
+
 /// 取消定时器
 - (void)cancel{
 	if (!_timer) return;

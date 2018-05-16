@@ -52,6 +52,16 @@
 + (instancetype)timerWithInterval:(double)interval dispatchQueue:(dispatch_queue_t)queue countdownSecond:(long)second countBlock:(void (^)(long remainSecond))countBlock;
 
 /**
+ 暂停定时器
+ */
+- (void)pause;
+
+/**
+ 重启定时器
+ */
+- (void)resume;
+
+/**
  *  取消定时器及其操作
  */
 - (void)cancel;
