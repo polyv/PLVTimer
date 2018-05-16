@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PLVTimer"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "高效易用安全 GCD 定时器"
   s.description  = <<-DESC
   PLVTimer
