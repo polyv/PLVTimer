@@ -21,7 +21,7 @@ dispatch_source_t CreateDispatchTimer(double interval, dispatch_queue_t queue, d
 @interface PLVTimer ()
 
 /// GCD 计时器
-@property (nonatomic, assign) dispatch_source_t timer;
+@property (nonatomic, strong) dispatch_source_t timer;
 
 @end
 
