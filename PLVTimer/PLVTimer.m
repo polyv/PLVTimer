@@ -21,7 +21,11 @@ dispatch_source_t CreateDispatchTimer(double interval, dispatch_queue_t queue, d
 @interface PLVTimer ()
 
 /// GCD 计时器
+#if OS_OBJECT_USE_OBJC
 @property (nonatomic, strong) dispatch_source_t timer;
+#else
+@property (nonatomic, assign) dispatch_source_t timer;
+#endif
 
 @end
 
